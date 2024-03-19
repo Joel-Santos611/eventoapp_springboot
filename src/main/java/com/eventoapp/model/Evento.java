@@ -26,7 +26,7 @@ public String getNome() {
 }
 public void setNome(String nome) {
     this.nome = nome;
-}
+} 
 public String getLocal() {
     return local;
 }
@@ -44,6 +44,12 @@ public String getHorario() {
 }
 public void setHorario(String horario) {
     this.horario = horario;
+}
+
+
+@Override
+public String toString() {
+    return "Evento [nome=" + nome + ", local=" + local + ", data=" + data + ", horario=" + horario + "]";
 }
 
 
