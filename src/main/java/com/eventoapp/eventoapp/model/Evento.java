@@ -1,6 +1,18 @@
-package com.eventoapp.model;
+package com.eventoapp.eventoapp.model;
 
-public class Evento {
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
+public class Evento implements Serializable {
+
+@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
+
 private String nome;
 private String local;
 private String data;
@@ -20,6 +32,15 @@ public Evento(String nome, String local, String data, String horario) {
 }
 
 
+
+public Long getId() {
+    return id;
+}
+
+
+public void setId(Long id) {
+    this.id = id;
+}
 
 public String getNome() {
     return nome;
